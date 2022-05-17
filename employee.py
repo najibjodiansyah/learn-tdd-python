@@ -18,4 +18,7 @@ class Employee:
 
     def compute_payout(self) -> float:
         """ Compute how much the employee should be paid. """
-        reise NotImplementedError()
+        payout = self.pay_rate * self.hours_worked + self.employee_cost
+        if self.has_commission:
+            payout += self.commission * self.constracts_landed
+        return payout
